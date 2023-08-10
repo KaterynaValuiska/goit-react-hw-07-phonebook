@@ -1,16 +1,22 @@
-export const App = () => {
+import FormRegistation from './FormRegistation';
+// import { useState } from 'react';
+import { Contacts } from './Contacts';
+import { Filter } from './Filter';
+
+// import { useSelector, useDispatch } from 'react-redux';
+// import { addContact, deleteContact } from './store';
+
+export default function App() {
   return (
     <div
       style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
+        padding: 30,
       }}
     >
-      React homework template
+      <h1>Phonebook</h1>
+      <FormRegistation />
+      <Filter />
+      <Contacts />
     </div>
   );
-};
+}
