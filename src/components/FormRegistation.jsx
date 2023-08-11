@@ -1,8 +1,7 @@
 // import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from './createSlice';
-import { nanoid } from '@reduxjs/toolkit';
+import { addContact } from './operations';
 
 export default function FormRegistation() {
   const [name, setName] = useState('');
@@ -38,8 +37,7 @@ export default function FormRegistation() {
     dispatch(
       addContact({
         name: name,
-        number: number,
-        id: nanoid(),
+        phone: number,
       })
     );
 
